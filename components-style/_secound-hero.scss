@@ -1,0 +1,84 @@
+$primary-color: #722ffb;
+$danger-color: #ffa28b;
+
+// start secound-hero
+.secound-hero {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  position: relative;
+  overflow: hidden;
+
+  .red-shadow {
+    position: absolute;
+    z-index: 7;
+    bottom: -7%;
+    right: -18%;
+    padding: 7% 20%;
+    background: $primary-color;
+    -webkit-filter: blur(12em);
+    filter: blur(12em);
+  }
+
+  .danger-shadow {
+    position: absolute;
+    z-index: 7;
+    top: -7%;
+    left: -18%;
+    padding: 7% 20%;
+    background: $danger-color;
+    -webkit-filter: blur(12em);
+    filter: blur(12em);
+  }
+
+  .text {
+    text-align: center;
+
+    h1 {
+      background-image: linear-gradient(to right, #722ffb, #ffa28b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 50px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 50px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .secound-hero {
+    height: 30vh;
+
+    .danger-shadow {
+      filter: blur(3em);
+      top: 7%;
+      left: -15%;
+
+      padding: 16% 22%;
+    }
+
+    .red-shadow {
+      filter: blur(3em);
+      padding: 16% 22%;
+      bottom: 6%;
+      right: -7%;
+    }
+
+    .text {
+      h1,
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+// end secound-hero
