@@ -176,9 +176,9 @@ $danger-color: #ffa28b;
     .left {
       .text {
         text-align: left;
-        &::before {
-          left: -25px !important;
-          right: auto !important;
+        &:not(:last-child):before {
+          left: -25px;
+          right: auto;
         }
         .icon {
           left: -40px;
@@ -196,6 +196,35 @@ $danger-color: #ffa28b;
         .icon {
           right: -40px;
           left: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-app {
+    .line {
+      .left {
+        .text {
+          text-align: right;
+
+          &:not(:last-child):before {
+            right: -23px;
+            left: auto;
+          }
+
+          .icon {
+            right: -35px;
+            left: auto;
+          }
+        }
+      }
+
+      .right {
+        .text {
+          margin-left: 0;
+          margin-right: 30px;
         }
       }
     }

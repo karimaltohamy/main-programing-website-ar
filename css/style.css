@@ -238,6 +238,11 @@ p {
   width: 20px;
 }
 
+@media (max-width: 768px) {
+  .dropdown {
+    margin: auto;
+  }
+}
 header {
   background-color: var(--secound-dark-bg);
   padding: 8px 0;
@@ -1682,6 +1687,9 @@ footer .line .right .social-media a i {
   .contact-us .content .left form input {
     width: 100%;
   }
+  .contact-us .content .left form input:nth-child(1), .contact-us .content .left form input:nth-child(3) {
+    margin-right: 0 !important;
+  }
 }
 @media (max-width: 600px) {
   .contact-us .content {
@@ -2668,7 +2676,7 @@ footer .line .right .social-media a i {
 .hosting-section .line .left .btn-read {
   padding: 8px 30px;
   border-radius: 50px;
-  background-color: var(--secound-dark-bg);
+  background-color: #0f0f11;
   color: white !important;
   display: inline-block;
   margin-top: 15px;
@@ -3694,9 +3702,9 @@ footer .line .right .social-media a i {
 .about-app .line .left .text {
   text-align: left;
 }
-.about-app .line .left .text::before {
-  left: -25px !important;
-  right: auto !important;
+.about-app .line .left .text:not(:last-child):before {
+  left: -25px;
+  right: auto;
 }
 .about-app .line .left .text .icon {
   left: -40px;
@@ -3711,6 +3719,23 @@ footer .line .right .social-media a i {
   left: auto;
 }
 
+@media (max-width: 768px) {
+  .about-app .line .left .text {
+    text-align: right;
+  }
+  .about-app .line .left .text:not(:last-child):before {
+    right: -23px;
+    left: auto;
+  }
+  .about-app .line .left .text .icon {
+    right: -35px;
+    left: auto;
+  }
+  .about-app .line .right .text {
+    margin-left: 0;
+    margin-right: 30px;
+  }
+}
 .info-app {
   padding: 60px 0;
   color: var(--color-text);
@@ -5709,6 +5734,10 @@ footer .line .right .social-media a i {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
+.blog_area .line .right .category_box .categorys .item span {
+  left: 0;
+  right: auto;
+}
 
 .blog_details {
   padding: 60px 0;
@@ -6113,6 +6142,10 @@ footer .line .right .social-media a i {
   border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+}
+.blog_details .line .right .category_box .categorys .item span {
+  left: 0;
+  right: auto;
 }
 
 .services_contact {

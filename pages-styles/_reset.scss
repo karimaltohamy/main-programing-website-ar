@@ -184,7 +184,7 @@ p {
 
 // end side-line
 
-//
+// language style btn
 .dropdown {
   width: fit-content;
   .btn {
@@ -225,5 +225,11 @@ p {
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+    margin: auto;
   }
 }

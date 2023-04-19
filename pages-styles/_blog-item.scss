@@ -475,6 +475,17 @@ $danger-color: #ffa28b;
           }
         }
       }
+
+      .category_box {
+        .categorys {
+          .item {
+            span {
+              left: 0;
+              right: auto;
+            }
+          }
+        }
+      }
     }
   }
 }
