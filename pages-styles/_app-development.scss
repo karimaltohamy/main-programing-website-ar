@@ -169,6 +169,39 @@ $danger-color: #ffa28b;
     }
   }
 }
+
+// diraction rtl style
+.about-app {
+  .line {
+    .left {
+      .text {
+        text-align: left;
+        &::before {
+          left: -25px !important;
+          right: auto !important;
+        }
+        .icon {
+          left: -40px;
+          right: auto;
+        }
+      }
+    }
+
+    .right {
+      .text {
+        &::before {
+          right: -25px;
+          left: auto !important;
+        }
+        .icon {
+          right: -40px;
+          left: auto;
+        }
+      }
+    }
+  }
+}
+
 // end about-app
 
 // start info-app

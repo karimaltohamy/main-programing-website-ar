@@ -172,6 +172,13 @@ $danger-color: #ffa28b;
     }
   }
 }
+
+// diraction rtl style
+.knowUs-digital {
+  .line {
+    flex-direction: row-reverse;
+  }
+}
 // end knowUs-digital
 
 // start services-digital
