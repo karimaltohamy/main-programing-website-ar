@@ -93,8 +93,8 @@
              <div class="center">
                 <ul>
                     <li><a href="index.html">الرئيسه</a></li>
-                    <li><a href="index.html">من نحن</a></li>
-                    <li><a href="index.html">خدمتنا</a></li>
+                    <li><a href="we-are.html">من نحن</a></li>
+                    <li><a href="index.html#services">خدمتنا</a></li>
                     <li><a href="portfolio.html">مشارعنا</a></li>
                     <li><a href="hosting-page.html">استضافه</a></li>
                     <li><a href="contact-us.html">تواصل معنا</a></li>
@@ -464,7 +464,7 @@
                     </div>
                     <div class="salary"> $75 </div>
                     <p>لكل مستخدم / شهر يتم دفعه سنويًا</p>
-                    <a href="#" class="btn_start">ابدأ</a>
+                    <button class="btn_start">ابدأ</button>
                 </div>
                 <div class=" box">
                     <h3 class="title-box">Professional</h3>
@@ -499,7 +499,7 @@
                     </div>
                     <div class="salary">$80</div>
                     <p>لكل مستخدم / شهر يتم دفعه سنويًا</p>
-                    <a href="#" class="btn_start">ابدأ</a>
+                    <button  class="btn_start">ابدأ</button>
                 </div>
                 <div class="box">
                     <h3 class="title-box">Enterprise</h3>
@@ -534,11 +534,49 @@
                     </div>
                     <div class="salary">$95</div>
                     <p>لكل مستخدم / شهر يتم دفعه سنويًا</p>
-                    <a href="#" class="btn_start">ابدأ</a>
+                    <button class="btn_start">ابدأ</button>
                 </div>
             </div>
         </div>
       </div>
+
+        <!-- start popup pricing -->
+          <div class="model_pricing">
+            <div class="content">
+              <div class="head">
+                <h4>تفاصيل الباقه</h4>
+                <i class="fa-solid fa-xmark close-pricing"></i>
+              </div>
+              <form action="" class="">
+                <div class="input_item">
+                  <label for="">أسمك</label>
+                  <input type="text" placeholder="Name">
+                </div>
+                <div class="input_item">
+                  <label for="">أيميلك</label>
+                  <input type="email" placeholder="Email">
+                </div>
+                <div class="input_item">
+                  <label for="">رقم الموبيل</label>
+                  <input type="tel" placeholder="Phone">
+                </div>
+                <div class="input_item">
+                  <label for="">أسم الباقه</label>
+                  <select name="" id="">
+                    <option value="">اختار الباقه</option>
+                    <option value="">شخصي</option>
+                    <option value="">احترافي</option>
+                    <option value="">مشروع</option>
+                  </select>
+                </div>
+              </form>
+              <div class="bottom">
+                <button class="btn_cancel">إلغاء</button>
+                <button class="btn_Send">إرسال</button>
+              </div>
+            </div>
+          </div>
+        <!-- end popup pricing -->
       <!-- end our Pricing -->
 
       <!-- start QUESTION  -->
@@ -714,8 +752,8 @@
               <div class="links">
                 <ul>
                  <li><a href="index.html">الرئيسه</a></li>
-                    <li><a href="index.html">من نحن</a></li>
-                    <li><a href="index.html">خدمتنا</a></li>
+                    <li><a href="we-are.html">من نحن</a></li>
+                    <li><a href="index.html#services">خدمتنا</a></li>
                     <li><a href="portfolio.html">مشارعنا</a></li>
                     <li><a href="hosting-page.html">استضافه</a></li>
                     <li><a href="contact-us.html">تواصل معنا</a></li>
@@ -797,6 +835,18 @@
             }
 
         })
+      
+        const closePricing = document.querySelector(".close-pricing")
+        const popupPricing = document.querySelector(".model_pricing")
+        const openPricing = document.querySelectorAll(".our-pricing .btn_start")
+        const btnCancel = document.querySelector(".btn_cancel")
+
+        openPricing.forEach(item => {
+          item.addEventListener("click", () => popupPricing.classList.add("active"))
+        })
+
+        closePricing.addEventListener("click", () => popupPricing.classList.remove("active"))
+        btnCancel.addEventListener("click", () => popupPricing.classList.remove("active"))
       </script>
     
     <script>
